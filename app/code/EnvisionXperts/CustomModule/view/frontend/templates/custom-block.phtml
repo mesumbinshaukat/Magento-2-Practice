@@ -1,0 +1,20 @@
+<?php
+/** @var $block \EnvisionXperts\CustomModule\Block\Products */
+$products = $block->getProductCollection();
+?>
+
+<div class="product-list">
+    <?php if (count($products)): ?>
+        <ul>
+            <?php foreach ($products as $product): ?>
+                <li>
+                    <h2><?php echo $product->getName(); ?></h2>
+                    <p>Price: <?php echo $product->getPrice(); ?></p>
+                    <p>SKU: <?php echo $product->getSku(); ?></p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p>No products found.</p>
+    <?php endif; ?>
+</div>
