@@ -182,6 +182,7 @@
   'DirectoryHelperDataProxy' => false,
   'EavVersionControlSnapshot' => false,
   'EnvisionXperts\\CustomModule\\Block\\Category' => false,
+  'EnvisionXperts\\CustomModule\\Block\\Product' => false,
   'EnvisionXperts\\CustomModule\\Block\\Products' => false,
   'EnvisionXperts\\CustomModule\\Controller\\Category\\Index' => true,
   'EnvisionXperts\\CustomModule\\Controller\\Category\\Index\\Interceptor' => false,
