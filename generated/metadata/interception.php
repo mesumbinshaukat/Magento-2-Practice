@@ -187,6 +187,7 @@
   'EnvisionXperts\\CustomModule\\Controller\\Category\\Index\\Interceptor' => false,
   'EnvisionXperts\\CustomModule\\Controller\\Index\\Index' => true,
   'EnvisionXperts\\CustomModule\\Controller\\Index\\Index\\Interceptor' => false,
+  'EnvisionXperts\\CustomModule\\Setup\\InstallData' => false,
   'Exception' => false,
   'FileGeneratorPublicationDecoratorForBaseFlow' => false,
   'FileGeneratorPublicationDecoratorForSourceThemeDeploy' => false,

@@ -1,4 +1,5 @@
 <?php return array (
+  'envisionxperts\\custommodule\\controller\\attribute\\index' => 'EnvisionXperts\\CustomModule\\Controller\\Attribute\\Index',
   'envisionxperts\\custommodule\\controller\\category\\index' => 'EnvisionXperts\\CustomModule\\Controller\\Category\\Index',
   'envisionxperts\\custommodule\\controller\\index\\index' => 'EnvisionXperts\\CustomModule\\Controller\\Index\\Index',
   'magento\\adminadobeims\\controller\\adminhtml\\oauth\\imscallback' => 'Magento\\AdminAdobeIms\\Controller\\Adminhtml\\OAuth\\ImsCallback',
