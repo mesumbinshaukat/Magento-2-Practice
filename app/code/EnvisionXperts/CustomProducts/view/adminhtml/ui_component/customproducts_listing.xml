@@ -1,28 +1,36 @@
 <?xml version="1.0"?>
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+     <dataSource name="customproducts_data_source"
+                component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <dataProvider name="customproducts_data_source"
+                      class="EnvisionXperts\CustomProducts\Ui\DataProvider\CustomProductsDataProvider">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
     <columns name="customproducts_columns">
         <column name="id">
             <settings>
                 <label translate="true">ID</label>
-                <sortOrder>10</sortOrder>
             </settings>
         </column>
         <column name="product_name">
             <settings>
                 <label translate="true">Product Name</label>
-                <sortOrder>20</sortOrder>
             </settings>
         </column>
-        <column name="price">
+        <column name="product_price">
             <settings>
                 <label translate="true">Price</label>
-                <sortOrder>30</sortOrder>
             </settings>
         </column>
     </columns>
-    <dataSource name="customproducts_data_source">
-        <settings>
-            <provider class="EnvisionXperts\CustomProducts\Ui\DataProvider\CustomProductsDataProvider" />
-        </settings>
-    </dataSource>
 </listing>

@@ -21,8 +21,15 @@ class CustomProductsDataProvider extends AbstractDataProvider
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
     }
 
+    // public function getData()
+    // {
+    //     return $this->collection->toArray();
+    // }
+
     public function getData()
-    {
-        return $this->collection->toArray();
-    }
+{
+    $data = $this->collection->toArray();
+    print_r($data); die();
+    return $data;
+}
 }
