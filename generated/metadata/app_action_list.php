@@ -2,6 +2,8 @@
   'envisionxperts\\custommodule\\controller\\attribute\\index' => 'EnvisionXperts\\CustomModule\\Controller\\Attribute\\Index',
   'envisionxperts\\custommodule\\controller\\category\\index' => 'EnvisionXperts\\CustomModule\\Controller\\Category\\Index',
   'envisionxperts\\custommodule\\controller\\index\\index' => 'EnvisionXperts\\CustomModule\\Controller\\Index\\Index',
+  'envisionxperts\\customproducts\\controller\\adminhtml\\product\\grid' => 'EnvisionXperts\\CustomProducts\\Controller\\Adminhtml\\Product\\Grid',
+  'envisionxperts\\customproducts\\controller\\index\\index' => 'EnvisionXperts\\CustomProducts\\Controller\\Index\\Index',
   'magento\\adminadobeims\\controller\\adminhtml\\oauth\\imscallback' => 'Magento\\AdminAdobeIms\\Controller\\Adminhtml\\OAuth\\ImsCallback',
   'magento\\adminadobeims\\controller\\adminhtml\\oauth\\imsreauthcallback' => 'Magento\\AdminAdobeIms\\Controller\\Adminhtml\\OAuth\\ImsReauthCallback',
   'magento\\adminanalytics\\controller\\adminhtml\\config\\disableadminusage' => 'Magento\\AdminAnalytics\\Controller\\Adminhtml\\Config\\DisableAdminUsage',
