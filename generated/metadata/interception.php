@@ -200,6 +200,7 @@
   'EnvisionXperts\\CustomProducts\\Model\\ResourceModel\\CustomProduct\\Collection' => true,
   'EnvisionXperts\\CustomProducts\\Model\\ResourceModel\\CustomProduct\\CollectionFactory' => false,
   'EnvisionXperts\\CustomProducts\\Model\\ResourceModel\\CustomProduct\\Collection\\Interceptor' => false,
+  'EnvisionXperts\\CustomProducts\\Model\\ResourceModel\\CustomProduct\\Grid\\Collection' => true,
   'EnvisionXperts\\CustomProducts\\Setup\\InstallSchema' => false,
   'EnvisionXperts\\CustomProducts\\Ui\\DataProvider\\CustomProductsDataProvider' => false,
   'Exception' => false,

@@ -1,36 +1,85 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
-     <dataSource name="customproducts_data_source"
-                component="Magento_Ui/js/grid/provider">
-        <settings>
-            <storageConfig>
-                <param name="indexField" xsi:type="string">id</param>
-            </storageConfig>
-            <updateUrl path="mui/index/render"/>
-        </settings>
-        <dataProvider name="customproducts_data_source"
-                      class="EnvisionXperts\CustomProducts\Ui\DataProvider\CustomProductsDataProvider">
-            <settings>
-                <requestFieldName>id</requestFieldName>
-                <primaryFieldName>id</primaryFieldName>
-            </settings>
-        </dataProvider>
-    </dataSource>
-    <columns name="customproducts_columns">
-        <column name="id">
-            <settings>
-                <label translate="true">ID</label>
-            </settings>
-        </column>
-        <column name="product_name">
-            <settings>
-                <label translate="true">Product Name</label>
-            </settings>
-        </column>
-        <column name="product_price">
-            <settings>
-                <label translate="true">Price</label>
-            </settings>
-        </column>
-    </columns>
+	<argument name="data" xsi:type="array">
+		<item name="js_config" xsi:type="array">
+			<item name="provider" xsi:type="string">customproducts_listing.custom_product_listing_data_source</item>
+		</item>
+	</argument>
+	<settings>
+		<spinner>custom_product_columns</spinner>
+		<deps>
+			<dep>customproducts_listing.custom_product_listing_data_source</dep>
+		</deps>
+	</settings>
+	<dataSource name="custom_product_listing_data_source" component="Magento_Ui/js/grid/provider">
+		<settings>
+			<storageConfig>
+				<param name="indexField" xsi:type="string">log_id</param>
+			</storageConfig>
+			<updateUrl path="mui/index/render"/>
+		</settings>
+		<dataProvider name="custom_product_listing_data_source" class="EnvisionXperts\CustomProducts\Ui\DataProvider\CustomProductsDataProvider">
+
+
+			<settings>
+				<requestFieldName>log_id</requestFieldName>
+				<primaryFieldName>log_id</primaryFieldName>
+			</settings>
+		</dataProvider>
+	</dataSource>
+	<listingToolbar name="listing_top">
+		<settings>
+			<sticky>true</sticky>
+		</settings>
+		<bookmark name="bookmarks"/>
+		<columnsControls name="columns_controls"/>
+		<!-- <exportButton class="Magento\Ui\Component\ExportButton">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="options" xsi:type="array">
+                        <item name="csv" xsi:type="array">
+                            <item name="value" xsi:type="string">csv</item>
+                            <item name="label" xsi:type="string" translate="true">CSV</item>
+                            <item name="url" xsi:type="string">search_report/searchreport/exportcsv</item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </exportButton> -->
+		<filters name="listing_filters"/>
+		<paging name="listing_paging"/>
+	</listingToolbar>
+	<columns name="custom_product_columns">
+		<selectionsColumn name="ids">
+			<settings>
+				<indexField>id</indexField>
+			</settings>
+		</selectionsColumn>
+		<column name="id">
+			<settings>
+				<filter>text</filter>
+				<sorting>desc</sorting>
+				<label translate="true">ID</label>
+			</settings>
+		</column>
+		<column name="product_name">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">Product Name</label>
+			</settings>
+		</column>
+		<column name="product_sku">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">SKU</label>
+			</settings>
+		</column>
+		<column name="product_price">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">Product Price</label>
+			</settings>
+		</column>
+		
+	</columns>
 </listing>
